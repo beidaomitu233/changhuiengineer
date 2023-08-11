@@ -16,7 +16,7 @@ import Hotelfood from "../views/childernrouter/HotelFoodService.vue"
 //创建路由规则
 const router=new VueRouter({
     //切换为history模式
-    mode:"history",
+   // mode:"history",
     routes:[
         {
             name:"fastFood",

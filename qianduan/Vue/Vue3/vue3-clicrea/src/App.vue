@@ -1,9 +1,17 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
+    <router-link :to="{
+  name:'home',
+  params: {
+    msg: 'Welcome to Your Vue.js App',
+    title: '首页',
+    btn: '打个招呼'
+  }
+}">Home</router-link>
+
     <router-link to="/about">About</router-link>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="less">
