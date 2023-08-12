@@ -1,15 +1,6 @@
 <template>
   <nav>
-    <router-link :to="{
-  name:'home',
-  params: {
-    msg: 'Welcome to Your Vue.js App',
-    title: '首页',
-    btn: '打个招呼'
-  }
-}">Home</router-link>
-
-    <router-link to="/about">About</router-link>
+    <router-link to="/watcher">进入数据检测组件</router-link>
   </nav>
   <router-view />
 </template>

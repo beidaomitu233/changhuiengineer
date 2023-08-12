@@ -2,7 +2,6 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <button @click="sayhello">打个招呼</button>
-    <h1>{{ msg }}</h1>
   </div>
 </template>
 
@@ -12,10 +11,10 @@ import { ref } from 'vue'
 
 export default {
   name: 'HomeView',
-  props: ['msg', 'title', 'btn'],
-  setup (props, context) {
+  setup () {
     const msg = 'Welcome to Yourzz Vue.js App'
     let username = ref('lisi')
+    
     const userinfo = ref({
       userclass: "gaosanwu"
     })
@@ -26,8 +25,6 @@ export default {
       console.log(username.value);
       console.log('````````````````');
       console.log(userinfo);
-      console.log('``-------从父组件传递过来的--------');
-      // console.log(props);
     }
     return {
       msg,
