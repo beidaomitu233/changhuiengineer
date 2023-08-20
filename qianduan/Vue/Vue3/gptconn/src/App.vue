@@ -1,10 +1,9 @@
 <template>
   <nav>
-    <router-link to="/comput">计算属性</router-link>
-    <br>
-    <router-link to="/watch">watch</router-link>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/Chat">Chat</router-link>
   </nav>
-  <router-view />
+  <router-view/>
 </template>
 
 <style lang="less">
