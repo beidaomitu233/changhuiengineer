@@ -12,6 +12,24 @@ export default {
   name: 'HomeView',
   setup () {
 
+    const msg = 'Welcome to Yourzz Vue.js App'
+    let username = ref('lisi')
+    
+    const userinfo = ref({
+      userclass: "gaosanwu"
+    })
+
+    function sayhello () {
+      console.log('hello', msg)
+      console.log(username);
+      console.log(username.value);
+      console.log('````````````````');
+      console.log(userinfo);
+    }
+    return {
+      msg,
+      sayhello
+    }
   }
 }
 </script>
