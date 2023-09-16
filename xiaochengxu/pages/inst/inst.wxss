@@ -1,0 +1,13 @@
+/* pages/inst/inst.wxss */
+
+.mt-2{
+  margin-top: 20px;
+  }
+
+  .inputz{
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    outline: red 1px solid;
+    display: block;
+  }

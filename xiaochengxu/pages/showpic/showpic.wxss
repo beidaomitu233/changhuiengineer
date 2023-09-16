@@ -1,0 +1,5 @@
+/* pages/showpic/showpic.wxss */
+
+image{
+  border: 1px solid red;
+}

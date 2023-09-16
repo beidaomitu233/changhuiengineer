@@ -1,0 +1,4 @@
+<!--components/chat/chat.wxml-->
+<text>components/chat/chat.wxml</text>
+父组件的参数
+<view>{{count}}</view>
