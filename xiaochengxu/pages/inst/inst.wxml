@@ -1,0 +1,49 @@
+<!--pages/inst/inst.wxml-->
+<view class="mt-2"><button  type="primary" bind:tap="changgedata"> 给变量+1 </button>
+<view>变量值{{count}}</view>
+
+<!-- 传参 -->
+<button  type="primary" bind:tap="changgedata2" data-usernum="{{3}}"> 传参给变量+3 </button>
+<view>变量值{{count2}}</view>
+
+<!-- 表单事件 -->
+
+<input type="text" value="{{poem}}" class="mt-2 inputz" bindinput="setpoem" />
+<view >
+数据源：
+  {{poem}}
+</view>
+
+<!-- 声明式 -->
+<navigator url="/pages/showpic/showpic" open-type="switchTab" ><button  type="primary" >  跳转图片页面 </button>
+</navigator>
+
+<navigator url="/pages/home/index" class="mt-2" open-type="navigate" ><button  type="primary" >  跳转home </button>
+</navigator>
+
+<!--编程式 -->
+<button  type="primary" bind:tap="gotoshowpic" >  跳转pic </button>
+<button  type="primary" bind:tap="gotoindex" >  跳转index </button>
+
+
+<button  type="primary" bind:tap="getbannerList" > 获取bannerList </button>
+
+<view>
+请求回来的新闻列表
+<view wx:for="{{query}}" wx:key="id">新闻标题：{{item.title}}
+<view>分类：{{item.category}}</view>
+
+</view>
+
+
+</view>
+
+</view>
+<!-- 触发事件并修改变量值 -->
+
+<!-- 意思是将本页面的count变量传递给chatbox组件的count属性 -->
+<chatbox count="{{count}}"></chatbox>
+
+
+
+<view>{{bannerList[0].src}}123123</view>

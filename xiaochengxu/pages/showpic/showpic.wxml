@@ -1,0 +1,14 @@
+<!--pages/showpic/showpic.wxml-->
+<image src="" mode=""/>
+<!-- 呈现数据 -->
+<view>{{imgdes}}</view>
+<image src="/images/meiye.png" mode="aspectFill"/>
+<!-- 动态绑定数据 -->
+<view>网络图片</view>
+<image src="{{bluecitysrc}}" mode="aspectFill"/>
+<!-- 三元表达式 -->、
+<view> {{num2 >=5? '数字大于五':'数字小于五'}} </view>
+
+<!-- 朋友圈图片 -->
+
+<image src="/images/friend.svg" mode="" style="width: 60rpx; height: 60rpx;"   />

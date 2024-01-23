@@ -1,0 +1,13 @@
+{
+  "navigationBarBackgroundColor": "#7f7f7f",
+  "navigationBarTitleText": "变量",
+  "navigationBarTextStyle":"white",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#7f7f7f",
+  "backgroundTextStyle":"dark",
+  "onReachBottomDistance": 40,
+
+  "usingComponents": {
+    "chatbox":"/components/chat/chat"
+  }
+}

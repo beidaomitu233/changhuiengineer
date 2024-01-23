@@ -1,0 +1,57 @@
+<!--pages/home/index.wxml-->
+
+
+<view class="mt-2">
+<!-- 按钮 -->
+<button>普通按钮</button>
+<button type="primary">主色调按钮</button>
+<!-- 设置按钮尺寸 -->
+<button type="primary" size="mini">主色调按钮</button>
+<!-- 镂空按钮 -->
+<button type="primary" size="mini" plain>主色调按钮</button>
+
+<navigator open-type="navigateBack" delta="1"><button type="primary" size="mini" plain>返回上一页</button></navigator>
+
+</view>
+
+<view class="container">
+<view>1</view>
+<view>2</view>
+<view>3</view>
+</view>
+
+<rich-text nodes="<h1 style='color:red'>这是标题</h1>"/>
+
+
+<swiper class="swiper1" indicator-dots  indicator-active-color="cyan" indicator-color="white"
+autoplay="3"
+circular
+>
+<!-- 容器1 -->
+<swiper-item>
+  <view>1</view>
+</swiper-item>
+<!-- 容器1 -->
+<swiper-item>
+  <view>2</view>
+</swiper-item>
+<!-- 容器1 -->
+<swiper-item>
+  <view>3</view>
+</swiper-item>
+</swiper>
+
+<view>
+  手机号：
+<text user-select>123151235123</text>
+</view>
+
+<scroll-view scroll-y class="container2"  >
+  <view class="container3">
+<view>1</view>
+<view>2</view>
+<view>3</view>
+</view>
+</scroll-view>
+
+

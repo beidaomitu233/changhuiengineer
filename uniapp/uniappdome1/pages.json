@@ -1,0 +1,94 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationBarBackgroundColor": "pink"
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/shopinglist/shopinglist",
+			"style": {
+				"navigationBarTitleText": "商品页面"
+			}
+		}
+	    ,{
+            "path" : "pages/goodsdetail/goodsdetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/News/News",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "每日新闻",
+                "enablePullDownRefresh": false,
+				"navigationBarTextStyle": "white"
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "#ffffff",
+		"navigationBarTitleText": "云端商场",
+		"navigationBarBackgroundColor": "#80b7f9",
+		"backgroundColor": "#F8F8F8" 
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "black",
+		"height": "80rpx",
+		"iconWidth": "42rpx",
+		"backgroundColor": "#F0F8FF",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/tabBarIcon/3.1我的.svg",
+				"selectedIconPath": "static/tabBarIcon/我的.svg"
+			},
+			{
+				"pagePath": "pages/News/News",
+				"text": "今日新闻",
+				"iconPath": "static/hotItem/音乐.png",
+				"selectedIconPath": "static/hotItem/推荐.png"
+				
+			},
+
+			{
+				"pagePath": "pages/shopinglist/shopinglist",
+				"text": "商品页面",
+				"iconPath": "static/tabBarIcon/3.1我的.svg",
+				"selectedIconPath": "static/tabBarIcon/我的.svg"
+				// 使用字体图标
+				// "iconfont": {
+				// 	"text": "\ue600",
+				// 	"selectedText": "\ue608",
+				// 	"fontSize":"42rpx"
+					
+				// }
+				
+				
+			}
+
+		],
+		"midButton": {
+			"text": "首页",
+			"iconPath": "static/tabBarIcon/3.1我的.svg",
+			"iconWidth": "80rpx"
+			
+		}
+		
+	}
+}

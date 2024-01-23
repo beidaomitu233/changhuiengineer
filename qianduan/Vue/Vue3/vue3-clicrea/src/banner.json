@@ -1,0 +1,17 @@
+{
+    "images": [
+      {
+        "src": "https://gpt.aigcyz.com/static/xiaochengxu/banner1.png",
+        "id": 1
+      },
+      {
+        "src": "https://gpt.aigcyz.com/static/xiaochengxu/banner2.png",
+        "id": 2
+      },
+      {
+        "src": "https://gpt.aigcyz.com/static/xiaochengxu/banner3.png",
+        "id": 3
+      }
+    ]
+  }
+  
