@@ -1,2 +1,4 @@
-package Abnormal;public class throwsz {
+package Abnormal;
+
+public class throwsz {
 }
