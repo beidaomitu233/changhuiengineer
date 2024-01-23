@@ -21,6 +21,11 @@ const routes = [
     name: 'WatcherView',
     component: () => import(/* webpackChunkName: "about" */ '../views/WatcherView.vue'),
   },
+  {
+    path:'/torefsz',
+    name:'ToRefsZView',
+    component: () => import(/* webpackChunkName: "about" */ '../views/torefsz.vue'),
+  }
 ]
 
 const router = createRouter({
