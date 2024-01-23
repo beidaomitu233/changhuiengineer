@@ -1,0 +1,7 @@
+{
+  "name": "art_add_onerow",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

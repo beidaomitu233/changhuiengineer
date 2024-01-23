@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录客户页面</title>
+</head>
+
+<body>
+
+
+    <div style="width:100%;text-align:center;margin-top:100px;">
+        <form action="${pageContext.request.contextPath }/loginCustomer" method="post">
+
+            <table width="450" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#d2d2d2">
+                <tr>
+                    <td height="42" colspan="2" align="center" valign="middle" bgcolor="#FFFFFF">
+                        <h3>顾客登录</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100" height="30" align="center" valign="middle" bgcolor="#FFFFFF">账 号</td>
+                    <td width="367" align="left" valign="middle" bgcolor="#FFFFFF"><input name="username" type="text"
+                            size="32" /></td>
+                </tr>
+                <tr>
+                    <td width="100" height="30" align="center" valign="middle" bgcolor="#FFFFFF">密 码</td>
+                    <td align="left" valign="middle" bgcolor="#FFFFFF"><input name="password" type="text" size="32" />
+                    </td>
+                </tr>
+                <tr>
+                    <td height="40" bgcolor="#FFFFFF"><input type="submit" value="&nbsp;登&nbsp;录&nbsp;"></td>
+                    <td height="40" align="left" valign="middle" bgcolor="#FFFFFF">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="reset" value="&nbsp;重&nbsp;置&nbsp;"></td>
+                </tr>
+            </table>
+
+        </form>
+        <a href="${pageContext.request.contextPath }/toRegisterCustomer">注册</a><br>
+    </div>
+
+
+</body>
+
+</html>

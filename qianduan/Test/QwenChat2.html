@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="chat-container"></div>
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <button onclick="sendUserMessage()">Send</button>
+    <div id="chat-messages"></div>
+
+
+
+
+    <script>
+        var chatContainer = document.getElementById('chat-container');
+        var userInput = document.getElementById('user-input');
+
+        // 创建一个新的EventSource对象来接收SSE流
+        var source = new EventSource('/chat');
+
+        // 监听message事件
+        source.addEventListener('message', function (event) {
+            // 解析JSON数据
+            var data = JSON.parse(event.data);
+
+            // 提取出message字段中的文字
+            var messageText = data.message;
+
+            // 显示或处理消息
+            console.log(messageText); // 输出到控制台
+            displayMessage(messageText); // 假设有一个函数用来在页面上显示消息
+        });
+
+        // 处理连接错误
+        source.onerror = function (event) {
+            console.error('Error occurred with the connection.', event);
+        };
+
+        function displayMessage(text) {
+            // 在这里实现将文本显示到网页上的逻辑
+            // 例如：添加到一个DOM元素中
+            var messageElement = document.getElementById('chat-messages');
+            var newMessage = document.createElement('p');
+            newMessage.textContent = text;
+            messageElement.appendChild(newMessage);
+        }
+
+
+        // 发送用户消息至后端
+        function sendUserMessage() {
+            if (userInput.value.trim()) {
+                fetch('http://127.0.0.1:5000/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: userInput.value
+                    }),
+                });
+                userInput.value = '';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

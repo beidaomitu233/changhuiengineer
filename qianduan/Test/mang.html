@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>客户信息</title>
+</head>
+
+<body background="${pageContext.request.contextPath}/images/b.jpg">
+    <h1 align="center">客户信息显示页面</h1>
+    <div align="center">
+        <form action="${pageContext.request.contextPath }/findCustomerByNameOrJobs">
+            名称：<input type="text" name="username" />
+            职业：<input type="text" name="jobs" />
+            <input type="submit" value="查找" />
+        </form>
+        <br>
+        <table style="border:1px solid;width:600px;">
+            <thead>
+                <tr bgcolor="green">
+                    <td>编号</td>
+                    <td>账号</td>
+                    <td>密码</td>
+                    <td>职业</td>
+                    <td>电话</td>
+                    <td>操作</td>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach items="${customer}" var="customer">
+                    <tr>
+                        <td>${customer.id}</td>
+                        <td>${customer.username}</td>
+                        <td>${customer.password}</td>
+                        <td>${customer.jobs}</td>
+                        <td>${customer.phone}</td>
+                        <td>
+                            <a href="${pageContext.request.contextPath }/toUpdateCustomer?id=${customer.id}">编辑</a>
+                            <a href="${pageContext.request.contextPath }/deleteCustomer?id=${customer.id}">删除</a>
+                        </td>
+                    </tr>
+                </c:forEach>
+
+            </tbody>
+        </table>
+
+        <h3><a href="${pageContext.request.contextPath }/toAddCustomer">添加新用户</a></h3><br>
+        ${message}
+    </div>
+
+    <a href="${pageContext.request.contextPath}${page.servletUrl}?pagenum=1">首页</a>&nbsp;&nbsp;
+    <a
+        href="${pageContext.request.contextPath}${page.servletUrl}?pagenum=${page.pagenum-1==0?1:page.pagenum-1}">上一页</a>&nbsp;&nbsp;
+    <c:forEach begin="${page.startPage}" end="${page.endPage}" var="num">
+        <a href="${pageContext.request.contextPath}${page.servletUrl}?pagenum=${num}">${num }</a>
+    </c:forEach>
+    &nbsp;&nbsp;
+    <a
+        href="${pageContext.request.contextPath}${page.servletUrl}?pagenum=${page.pagenum+1>page.totalpage?page.totalpage:page.pagenum+1}">下一页</a>&nbsp;&nbsp;
+    <a href="${pageContext.request.contextPath}${page.servletUrl}?pagenum=${page.totalpage}">尾页</a>
+    <select id="s1">
+        <c:forEach begin="1" end="${page.totalpage}" var="num">
+            <option value="${num}" ${page.pagenum==num?'selected="selected"':''}></option>
+  					</c:forEach>
+  				</select>
+  				<a href="javascript:jump()">跳转</a>
+  				<script type="text/javascript">
+  					function jump(){
+						var num = document.getElementById("s1").value;
+						window.location.href="${pageContext.request.contextPath}${page.servletUrl}?pagenum="+num;
+  					}
+  				</script>
+</body>
+
+</html>

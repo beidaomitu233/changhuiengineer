@@ -1,0 +1,57 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": ["title","content"],
+	"permission": {
+		"read": true,
+		// 如果用户ID不为空则可创建
+		"create": "auth.uid!=null",
+		// 作者的ID与当前用户ID是否相等
+		"update": "doc.userid==auth.uid",
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"userid":{
+			"bsonType": "string",
+			"title": "用户ID",
+			// 与其他表的id进行链接
+			"foreignKey": "uni-id-users._id",
+			//设置默认值为用户ID
+			
+			"defaultValue":{
+				"$env": "uid"
+			}
+		},
+		"title":{
+			"bsonType":"string",
+			"title": "博客标题",
+			"description": "这是博客标题",
+			"trim":"both"
+		},
+		"content":{
+			"bsonType": "string",
+			"title": "文章内容",
+			"description": "这是文章内容",
+			"trim":"both"
+		},
+		"posttime":{
+			"bsonType": "timestamp",
+			"title": "发布时间",
+			"description": "文章内容",
+			"defaultValue":{
+				"$env": "now"
+			}
+		},
+		"userip":{
+			"bsonType": "string",
+			"title": "发布ip地址",
+			"description": "ip地址",
+			"defaultValue":{
+				"$env": "clientIP"
+			}
+		}
+	}
+}

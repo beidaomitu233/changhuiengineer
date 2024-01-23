@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 align="center">添加客户页面</h1>
+    <div style="width:100%;text-align:center">
+        <form action="${pageContext.request.contextPath }/addCustomer" method="post">
+            名称:<input type="text" name="username" /><br>
+            职业:<input type="text" name="password" /><br>
+            电话:<input type="text" name="jobs" /><br>
+            <input type="submit" value="添加">
+            <input type="reset" value="重置"><br>
+        </form>
+        <a href="${pageContext.request.contextPath }/findAllCustomer">返回</a><br>
+    </div>
+</body>
+
+</html>
+
+这是基于ssm实现的顾客登入实验全过程。现在你需要将这个实验过程写成实验报告。
+1.根据下面实验报告模板结构来填写并输出。
+2.你需要根据内容来去写对应的内容，示例内容只是演示输出的格式。
+3. 你需要根据文档内容去总结。
+4.实验过程是SSM，但是你要以mybatis视角去写这个报告。
+实验报告的结构：
+```
+实验目的：
+“示例如下：(1.熟悉MyBatis框架的基本原理
+2.掌握MyBatis中核心对象的使用
+3.掌握MyBatis基本数据操作
+4.掌握MyBatis动态SQL
+5.掌握MyBatis关联映射) ”
+实验原理： “要求：（实验原理部分需要多写一些，可以去分析实验目的中的技术和作用以及相关介绍。）”
+实验内容及过程：
+实验结果及分析：
+实验小结：
+```

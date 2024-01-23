@@ -1,0 +1,5 @@
+[{
+	"id": "dbJQL-test-get", 
+	"jql": "db.collection(\"demoArt\").limit(3).orderBy(\"_id\",\"desc\").get()", 
+	"expiresIn": 30 
+}]

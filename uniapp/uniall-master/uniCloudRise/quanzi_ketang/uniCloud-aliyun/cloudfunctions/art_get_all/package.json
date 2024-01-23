@@ -1,0 +1,20 @@
+{
+    "name": "art_get_all",
+    "dependencies": [],
+    "extensions": {
+        "uni-cloud-jql": []
+    },
+    "cloudfunction-config": {
+        "memorySize": 512,
+        "timeout": 5,
+        "triggers": [
+            {
+                "name": "myTrigger",
+                "type": "timer",
+                "config": "0 0 * * * * *"
+            }
+        ],
+        "path": "",
+        "runtime": "Nodejs8"
+    }
+}

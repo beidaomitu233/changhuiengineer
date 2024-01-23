@@ -1,0 +1,19 @@
+{
+    "name": "xzs-api-news",
+    "dependencies": {
+        "xzs-utils": "file:../common/xzs-utils"
+    },
+    "extensions": {
+        "uni-cloud-jql": [],
+        "uni-cloud-redis": []
+    },
+    "cloudfunction-config": {
+        "memorySize": 512,
+        "timeout": 5,
+        "triggers": [],
+        "path": "/news",
+        "runtime": "Nodejs8",
+        "blackListEnable": true,
+		"ipFilterForHttpEnable": true
+    }
+}

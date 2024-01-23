@@ -1,0 +1,7 @@
+{
+  "name": "artChangeOne",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "demoObjUrl",
+  "dependencies": {
+    "demo-utils": "file:../common/demo-utils",
+    "xzs-utils": "file:../common/xzs-utils"
+  },
+  "extensions": {
+    "uni-cloud-jql": {},
+    "uni-cloud-redis": {}
+  }
+}

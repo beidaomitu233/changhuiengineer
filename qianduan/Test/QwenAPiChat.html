@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Qwen</title>
+    <style>
+        #chat-container {
+            height: 500px;
+            overflow-y: scroll;
+        }
+
+        .message {
+            margin: 5px 0;
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+
+        .user-message {
+            background-color: lightblue;
+            align-self: flex-end;
+        }
+
+        .assistant-message {
+            background-color: lightgreen;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chat-container"></div>
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <button onclick="sendUserMessage()">Send</button>
+
+    <script>
+        var chatContainer = document.getElementById('chat-container');
+        var userInput = document.getElementById('user-input');
+        var source = new EventSource('/chat');
+
+
+        // 显示消息到聊天窗口
+        function displayMessage(message) {
+            var messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', `role-${message.role}`);
+            messageDiv.textContent = message.content;
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // 监听SSE消息事件
+        source.addEventListener('message', function (event) {
+            var data = JSON.parse(event.data);
+            displayMessage(data.message);
+        });
+
+        // 发送用户消息至后端
+        function sendUserMessage() {
+            if (userInput.value.trim()) {
+                fetch('http://127.0.0.1:5000/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: userInput.value
+                    }),
+                });
+                userInput.value = '';
+            }
+        }
+    </script>
+</body>
+
+
+</html>

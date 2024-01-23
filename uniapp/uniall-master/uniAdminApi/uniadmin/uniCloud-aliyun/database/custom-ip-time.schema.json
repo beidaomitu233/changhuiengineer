@@ -1,0 +1,47 @@
+{
+	"bsonType": "object",
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"create_date": {
+			"bsonType": "timestamp",
+			"description": "创建时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		},
+		"create_date_arr":{
+			"bsonType": "array",
+			"description": "获取时间的数组"
+		},
+		"device_id": {
+			"bsonType": "string",
+			"description": "设备唯一标识"
+		},
+		"ip": {
+			"bsonType": "string",
+			"description": "ip地址"
+		},
+		"count":{
+			"bsonType": "int",
+			"description": "调用次数"
+		},
+		"appId":{
+			"bsonType": "string",
+			"description": "应用appid"
+		},
+		"deviceId":{
+			"bsonType": "string",
+			"description": "设备 id 。由 uni-app 框架生成并存储"
+		}
+	},
+	"required": [],
+	"version": "0.0.1"
+}

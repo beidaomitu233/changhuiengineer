@@ -1,0 +1,14 @@
+{
+  "name": "xzs-api-nav",
+  "dependencies": {
+    "xzs-utils": "file:../common/xzs-utils"
+  },
+  "extensions": {
+    "uni-cloud-jql": {},
+    "uni-cloud-redis": {}
+  },  
+  "cloudfunction-config": {
+	  "blackListEnable": true,
+	  "ipFilterForHttpEnable": true
+  }
+}
