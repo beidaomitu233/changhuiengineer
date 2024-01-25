@@ -782,11 +782,8 @@ sum(arr)
 > 类的声明包含一下几点
 
 - 访问权限
-
 - 返回值类型
-
 - 是否静态
-
 - 类名
 
 ```Java
@@ -1215,143 +1212,6 @@ System.out.println(e3);
 System.out.println(list1);
 ```
 
-### String
-
-> java.lang.String类代表字符串，String类定义的变量可以用于指向字符串对像，然后操作该字符串。
-
-- 创建后不可变内容，更改是创造了新的空间进行存储，并且把String对象地址指向新的地址
-
-![image_mB5RiUFk6d.png](assets/image_mB5RiUFk6d-20240121141758-w6gob7r.png)
-
-- 直接输出String对象也可以输出结果是因为jvm的优化结果
-
-```Java
-//声明的几种方式 
-
-String name="asdsa"
-
-//几乎不用
-String name=new String()
-
-```
-
-```Java
-//当创建的内容一样的时候，变量池中就不会在开辟新的空间进行存储，而是将namee
-//的地址指向了name
-
-
-String name="asdsa"
-
-String namee="asdsa"
-
-```
-
-- 以“”方式给出的字符串对象，在字符串常量池中存储，而且相同内容只会在其中存储一份。
-- 字符串常量值是建再堆内存中的一个对象空间。
-- 通过构造器new对象，每new一次都会产生一个新对象，放在堆内存中。并会存到字符串常量池中
-
-![image_CCeWKbKm0-.png](assets/image_CCeWKbKm0--20240121141758-n0mtxsl.png)
-
-### String常用的方法
-
-#### equals方法
-
-> 用于字符串内容之间的比较
-
-```Java
-    public static class Stringtesr{
-
-        String okname="asd";
-        String okpassword="aa";
-
-        public void test(){
-            Scanner sc=new Scanner(System.in);
-            System.out.println("输入名字");
-           String name=sc.next();
-            System.out.println("请输入密码");
-           String password=sc.next();
-
-            if(okname.equals(name)&&password.equals(okpassword)){
-                System.out.println("登入成功");
-            }else {
-                System.out.println("账号或密码错误");
-            }
-
-
-        }
-
-
-    }
-
-
-```
-
-#### equalsIgnoreCase
-
-> 忽略大小写进行字符串之间的比较
-
-```Java
-    public void img(){
-            String name="Asd";
-            System.out.println(okname.equalsIgnoreCase(name));
-
-        }
-```
-
-#### charAt索引
-
-> 获取某个索引位置处的字符,可以通过索引来遍历输出所有的字符
-
-```Java
-String name="asdsa"
-char c=name.charAt(1)
-            char c=name.charAt(1);
-            System.out.println("第一个字符是"+c);
-
-```
-
-#### toCharArray()将字符串转化为字符数组
-
-```Java
-char[]chars= name.toCharArray();
-for (int i 0;i<chars.length;i++){
-char ch= chars[i];
-System.out.println(ch);
-}
-```
-
-#### substring(int index ,int end index)
-
-> 截取字符串,会产生新的字符串，原来的字符串不变，需要去接收
-
-```Java
-//语法,可以只写开头，会截取到最后
-字符串.substring(begin index,endindex)
-
-
-name2.substring(4,9);
-
-```
-
-#### replace替换
-
-> 会产生新的字符串，原来的字符串不变，需要去接收
-
-```Java
-String name3="金三胖是最厉害的80后，金三胖棒棒的！我好爱金三胖"；
-
-name3.replace(target:"金三胖"，replacement:"**");
-```
-
-#### contains
-
-查询是否包含,返回值是布尔型
-
-```Java
-System.oUt.println(name3.contains("金三胖"))；//trUe
-System.out.println(name3.contains("金二胖"))；//false
-```
-
 ## 面向对象
 
 > 通过构造器实例化对象时。且有继承状态下，子类的构造器中自带super方法调用父类的无参构造器。有静态代码块和无参构造器同时存在时，会先执行静态代码块
@@ -1628,8 +1488,8 @@ int z=6;
 
 1. main方法是由虚拟机调用类中的mian方法，所以要写成public，要不然会调用不到。
 2. java虚拟机在执行main方法时不必创建对象，所以方法必须是static
-3. 该方法接收String类型的数组参数，该数组中保存执行java命令时传递给所  
-    运行的类的参数案例演示，接收参数.
+3. 该方法接收String类型的数组参数，该数组中保存执行java命令时传递给所
+   运行的类的参数案例演示，接收参数.
 
 ‍
 
