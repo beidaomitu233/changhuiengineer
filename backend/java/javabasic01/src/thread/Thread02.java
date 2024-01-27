@@ -5,6 +5,7 @@ public class Thread02 {
 
         Dog dog = new Dog();
 //      底层使用了代理模式，实现了这个功能。
+//        所以需要把Runnable接口对象传入，让Thread创建线程并代理调run放法。
         Thread thread = new Thread(dog);
         thread.start();
 
