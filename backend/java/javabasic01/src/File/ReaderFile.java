@@ -5,7 +5,6 @@ import java.io.*;
 public class ReaderFile {
     public static void main(String[] args) {
 
-        BufferedWriter
 
         Reader01 reader01 = new Reader01("E:\\FileContr\\a\\1.txt");
         try {

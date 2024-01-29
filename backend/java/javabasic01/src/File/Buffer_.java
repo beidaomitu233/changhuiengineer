@@ -42,7 +42,7 @@ public class Buffer_ {
             bufferedWriter = new BufferedWriter(new FileWriter(path,true));
             bufferedWriter.write("buffer写入");
 //          需要手动写入换行
-            bufferedWriter.write("\n");
+            bufferedWriter.newLine(); // 写入换行符
             bufferedWriter.write("buffer写入");
         } catch (IOException e) {
             e.printStackTrace();
