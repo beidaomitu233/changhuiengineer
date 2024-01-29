@@ -1,6 +1,7 @@
 package File;
 
 import java.io.File;
+import java.util.Date;
 
 public class File02 {
     public static void main(String[] args) {
@@ -24,20 +25,18 @@ public class File02 {
         System.out.println("是否是文件" + file.isFile());
 
         // 查看是否是目录
-        System.out.println("是否是文件" + file.isDirectory());
+        System.out.println("是否目录" + file.isDirectory());
 
         // 查看是否可读。
-        System.out.println("是否是文件" + file.canRead());
+        System.out.println("是否可读" + file.canRead());
 
-        // 查看是否科协
-        System.out.println("是否是文件" + file.canWrite());
+        // 查看是否可写
+        System.out.println("是否可写" + file.canWrite());
 
-        // 查看是否是文件
-        System.out.println("是否是文件" + file.isFile());
-        // 查看是否是文件
-        System.out.println("是否是文件" + file.isFile());
-        // 查看是否是文件
-        System.out.println("是否是文件" + file.isFile());
+        // 最近一次修改时间戳（毫秒值）
+        long lastModifiedTime = file.lastModified();
+        Date date = new Date(lastModifiedTime);
+        System.out.println("最近修改时间: " + date);
 
 
 
